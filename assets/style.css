@@ -23,6 +23,10 @@ body, html {
   margin-left: 50px;
 }
 
+.header-left:hover {
+  color: purple;
+     transition: color 0.3s;
+}
 .header-logo {
   font-size: 1.8rem;
   font-weight: bold;
@@ -281,4 +285,324 @@ main{
   .about-card {
     max-width: 100%;
   }
+}
+/* =============================== */
+/*       NIEUWE CATALOGUS CSS      */
+/* =============================== */
+.catalogus {
+  background-image: url('../assets/img/achtergrond-main3.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.catalogus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+
+.catalogus h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.8rem;
+  color: rgb(235, 11, 235);
+  text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+  margin-bottom: 60px;
+}
+
+/* ===== GRID CONTAINER ===== */
+.catalogus-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 35px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* ===== KAART ===== */
+.catalogus-card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.catalogus-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== AFBEELDING ===== */
+.catalogus-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.catalogus-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ===== INFO ===== */
+.catalogus-info {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.catalogus-info h3 {
+  color: rgb(235, 11, 235);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.catalogus-info .genre {
+  font-size: 1rem;
+  color: #dcdcdc;
+  margin-bottom: 10px;
+}
+
+.catalogus-info .beschrijving {
+  font-size: 0.95rem;
+  color: #f5f5f5;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* ===== BUTTON ===== */
+.catalogus-button {
+  background-color: rgb(235, 11, 235);
+  color: white;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-bottom: 20px;
+}
+
+.catalogus-button:hover {
+  background-color: rgb(180, 0, 180);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .catalogus h2 {
+    font-size: 2.4rem;
+  }
+
+  .catalogus-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogus {
+    padding: 70px 15px;
+  }
+
+  .catalogus-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+  }
+
+  .catalogus-card {
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalogus h2 {
+    font-size: 2rem;
+  }
+
+  .catalogus-image {
+    height: 180px;
+  }
+
+  .catalogus-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .catalogus-info .beschrijving {
+    font-size: 0.9rem;
+  }
+}
+
+/* dashboard pagina */
+
+tr{
+
+}
+.logout-style {
+  background: linear-gradient(135deg, #3a0ca3, #000000);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(58, 12, 163, 0.4);
+}
+
+.logout-style:hover {
+  background: linear-gradient(135deg, #5f0f40, #000000);
+  box-shadow: 0 6px 18px rgba(95, 15, 64, 0.6);
+  transform: translateY(-2px);
+}
+.dashboard {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    background-color: #121212;
+    padding: 20px;
+}
+
+/* Titels */
+.dashboard h2,
+.dashboard h3 {
+    color: #d0bfff;
+    font-weight: 600;
+}
+
+/* Logout knop */
+.dashboard .logout-style {
+    background: linear-gradient(135deg, #3a0ca3, #000000);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(58, 12, 163, 0.4);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.dashboard .logout-style:hover {
+    background: linear-gradient(135deg, #5f0f40, #000000);
+    box-shadow: 0 6px 18px rgba(95, 15, 64, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Form styling */
+.dashboard form {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(58, 12, 163, 0.3);
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.dashboard form input[type="text"],
+.dashboard form input[type="file"],
+.dashboard form button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #3a0ca3;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.dashboard form input[type="text"]:focus,
+.dashboard form input[type="file"]:focus {
+    border-color: #a4508b;
+    box-shadow: 0 0 8px #a4508b;
+    outline: none;
+}
+
+.dashboard form button {
+    background: linear-gradient(135deg, #3a0ca3, #000000);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dashboard form button:hover {
+    background: linear-gradient(135deg, #5f0f40, #000000);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(95, 15, 64, 0.6);
+}
+
+/* Tabel styling */
+.dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(58, 12, 163, 0.3);
+}
+
+.dashboard table th,
+.dashboard table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #3a0ca3;
+}
+
+.dashboard table th {
+    background-color: #3a0ca3;
+    color: #fff;
+}
+
+.dashboard table tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+.dashboard table tr:hover {
+    background-color: #5f0f40;
+    cursor: pointer;
+}
+
+/* Actieknoppen in tabel */
+.dashboard table a.button {
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #3a0ca3, #000000);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.dashboard table a.button:hover {
+    background: linear-gradient(135deg, #5f0f40, #000000);
 }

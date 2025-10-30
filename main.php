@@ -14,8 +14,8 @@
 <main>
   <section class="hero">
     <div class="hero-content">
-      <h1 class="hero-title">Welkom bij Music Info</h1>
-      <p class="hero-slogan">Alles over je muziek!</p>
+      <h1 class="hero-title">Welkom bij Artist Info</h1>
+      <p class="hero-slogan">alles over je artiesten!!</p>
       <p class="hero-text">
         Op deze site vind je informatie over je favoriete artiesten.
         Duik in onze catalogus en ontdek nieuwe artiesten die perfect bij jouw stijl past.
@@ -26,29 +26,30 @@
   </section>
   <section class="about">
   <h2>Over Music Info</h2>
-  <div class="about-grid">
-    <div class="about-card">
-      <h3>Ontdek artiesten</h3>
-      <p>
-        Vind nieuwe artiesten en genres die perfect passen bij jouw smaak.
-        Onze site helpt je nieuwe favorieten artiesten te ontdekken.
-      </p>
-    </div>
+  <?php
+include 'assets/incudes/db.php';
 
-    <div class="about-card">
-      <h3>Leer Meer</h3>
-      <p>
-        Lees meer informatie over artiesten, hun geschiedenis en de betekenis achter de nummers.
-      </p>
-    </div>
+$stmt = $pdo->query("SELECT * FROM info_vakjes LIMIT 1");
+$info = $stmt->fetch(PDO::FETCH_ASSOC);
+?>
 
-    <div class="about-card">
-      <h3>over ons</h3>
-      <p>
-        Deze website is gemaakt door sebastiaan Kuper zodat mensen hun informatie kunnen vinden over muziek
-      </p>
-    </div>
+<div class="about-grid">
+  <div class="about-card">
+    <h3><?= htmlspecialchars($info['titel1'] ?? 'Ontdek artiesten') ?></h3>
+    <p><?= nl2br(htmlspecialchars($info['tekst1'] ?? 'Vind nieuwe artiesten en genres...')) ?></p>
   </div>
+
+  <div class="about-card">
+    <h3><?= htmlspecialchars($info['titel2'] ?? 'Leer meer') ?></h3>
+    <p><?= nl2br(htmlspecialchars($info['tekst2'] ?? 'Lees meer informatie over artiesten...')) ?></p>
+  </div>
+
+  <div class="about-card">
+    <h3><?= htmlspecialchars($info['titel3'] ?? 'Over ons') ?></h3>
+    <p><?= nl2br(htmlspecialchars($info['tekst3'] ?? 'Deze website is gemaakt door Sebastiaan Kuper...')) ?></p>
+  </div>
+</div>
+
 </section>
 </main>
 

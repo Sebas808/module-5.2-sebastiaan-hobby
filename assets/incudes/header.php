@@ -1,7 +1,7 @@
 <header class="header">
     <div class="header-left">
       <div class="header-logo">🎵 Artist Info</div>
-      <div class="header-slogan">alles over je muziek!</div>
+      <div class="header-slogan">alles over je artiesten!</div>
     </div>
 
     <nav class="header-nav">
@@ -12,10 +12,10 @@
       </div>
 
       <div class="header-nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="artiesten.html">catalogus</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.php">Login</a>
+        <a href="main.php">Home</a>
+        <a href="catalogus.php">catalogus</a>
+        <a href="">Contact</a>
+        <a href="dashboard.php">Login</a>
       </div>
     </nav>
   </header>

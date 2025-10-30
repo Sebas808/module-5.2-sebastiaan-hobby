@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db   = 'artist_info';
+$db   = 'music_info';
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';
