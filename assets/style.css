@@ -285,6 +285,10 @@ main{
   .about-card {
     max-width: 100%;
   }
+  .hero-content{
+display: flex;
+flex-direction: column;
+  }
 }
 /* =============================== */
 /*       NIEUWE CATALOGUS CSS      */
@@ -459,6 +463,7 @@ main{
 tr{
 
 }
+/* --- BASIS STYLING (ongewijzigd van jouw versie) --- */
 .logout-style {
   background: linear-gradient(135deg, #3a0ca3, #000000);
   color: #ffffff;
@@ -478,131 +483,279 @@ tr{
   box-shadow: 0 6px 18px rgba(95, 15, 64, 0.6);
   transform: translateY(-2px);
 }
+
 .dashboard {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
-    background-color: #121212;
-    padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background-color: #121212;
+  padding: 20px;
 }
 
 /* Titels */
 .dashboard h2,
 .dashboard h3 {
-    color: #d0bfff;
-    font-weight: 600;
+  color: #d0bfff;
+  font-weight: 600;
 }
 
 /* Logout knop */
 .dashboard .logout-style {
-    background: linear-gradient(135deg, #3a0ca3, #000000);
-    color: #ffffff;
-    border: none;
-    border-radius: 12px;
-    padding: 12px 28px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(58, 12, 163, 0.4);
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 20px;
+  background: linear-gradient(135deg, #3a0ca3, #000000);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(58, 12, 163, 0.4);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .dashboard .logout-style:hover {
-    background: linear-gradient(135deg, #5f0f40, #000000);
-    box-shadow: 0 6px 18px rgba(95, 15, 64, 0.6);
-    transform: translateY(-2px);
+  background: linear-gradient(135deg, #5f0f40, #000000);
+  box-shadow: 0 6px 18px rgba(95, 15, 64, 0.6);
+  transform: translateY(-2px);
 }
 
 /* Form styling */
 .dashboard form {
-    background-color: #1f1f1f;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(58, 12, 163, 0.3);
-    margin-bottom: 30px;
-    max-width: 500px;
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(58, 12, 163, 0.3);
+  margin-bottom: 30px;
+  max-width: 600px;
 }
 
 .dashboard form input[type="text"],
 .dashboard form input[type="file"],
-.dashboard form button {
-    width: 100%;
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #3a0ca3;
-    background-color: #2a2a2a;
-    color: #ffffff;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+.dashboard form button,
+.dashboard form textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #3a0ca3;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .dashboard form input[type="text"]:focus,
-.dashboard form input[type="file"]:focus {
-    border-color: #a4508b;
-    box-shadow: 0 0 8px #a4508b;
-    outline: none;
+.dashboard form input[type="file"]:focus,
+.dashboard form textarea:focus {
+  border-color: #a4508b;
+  box-shadow: 0 0 8px #a4508b;
+  outline: none;
 }
 
 .dashboard form button {
-    background: linear-gradient(135deg, #3a0ca3, #000000);
-    border: none;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  background: linear-gradient(135deg, #3a0ca3, #000000);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .dashboard form button:hover {
-    background: linear-gradient(135deg, #5f0f40, #000000);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(95, 15, 64, 0.6);
+  background: linear-gradient(135deg, #5f0f40, #000000);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(95, 15, 64, 0.6);
 }
 
 /* Tabel styling */
 .dashboard table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #1f1f1f;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(58, 12, 163, 0.3);
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(58, 12, 163, 0.3);
 }
 
 .dashboard table th,
 .dashboard table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #3a0ca3;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #3a0ca3;
 }
 
 .dashboard table th {
-    background-color: #3a0ca3;
-    color: #fff;
+  background-color: #3a0ca3;
+  color: #fff;
 }
 
 .dashboard table tr:nth-child(even) {
-    background-color: #2a2a2a;
+  background-color: #2a2a2a;
 }
 
 .dashboard table tr:hover {
-    background-color: #5f0f40;
-    cursor: pointer;
+  background-color: #5f0f40;
+  cursor: pointer;
 }
 
 /* Actieknoppen in tabel */
 .dashboard table a.button {
-    padding: 6px 12px;
-    background: linear-gradient(135deg, #3a0ca3, #000000);
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #3a0ca3, #000000);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
 
 .dashboard table a.button:hover {
-    background: linear-gradient(135deg, #5f0f40, #000000);
+  background: linear-gradient(135deg, #5f0f40, #000000);
 }
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Mobiel (tot 768px) */
+@media (max-width: 768px) {
+
+  .dashboard {
+    padding: 15px;
+  }
+
+  .dashboard h2,
+  .dashboard h3 {
+    text-align: center;
+  }
+
+  /* Formulieren nemen hele breedte */
+  .dashboard form {
+    width: 100%;
+    max-width: none;
+    padding: 15px;
+  }
+
+  /* Tabellen scrollbaar maken */
+  .dashboard table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+  }
+
+  .dashboard table th,
+  .dashboard table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  /* Afbeeldingen kleiner maken */
+  .dashboard table img {
+    width: 60px;
+    height: auto;
+  }
+
+  /* Knoppen centreren en groter maken */
+  .dashboard form button,
+  .dashboard table a.button {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  /* Logout knop centreren */
+  .dashboard .logout-style {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 30px 0;
+  }
+}
+
+/* Zeer kleine schermen (tot 480px) */
+@media (max-width: 480px) {
+  .dashboard {
+    font-size: 0.9rem;
+  }
+
+  .dashboard table th,
+  .dashboard table td {
+    font-size: 0.8rem;
+  }
+
+  .dashboard h2 {
+    font-size: 1.2rem;
+  }
+
+  .dashboard h3 {
+    font-size: 1rem;
+  }
+}
+
+
+/* detail pagina */
+
+        .detail-container {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .detail-card {
+            background-color: #1f1f1f;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(58, 12, 163, 0.4);
+            max-width: 700px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .detail-card img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .detail-card h2 {
+            color: #d0bfff;
+            margin-bottom: 10px;
+        }
+
+        .detail-card p {
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .detail-card .genre {
+            color: #a4508b;
+            font-weight: 600;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3a0ca3, #000000);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: linear-gradient(135deg, #5f0f40, #000000);
+            box-shadow: 0 6px 18px rgba(95, 15, 64, 0.6);
+            transform: translateY(-2px);
+        }
+   

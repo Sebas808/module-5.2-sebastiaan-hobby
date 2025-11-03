@@ -1,3 +1,4 @@
+ <?php include 'assets/incudes/header.php' ?>
 <?php
   include 'assets/incudes/db.php';
 
@@ -24,70 +25,8 @@ if (!$artiest) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($artiest['naam']); ?> - Details</title>
-    <link rel="stylesheet" href="style.css"> <!-- jouw hoofdcss -->
-    <style>
-        .detail-container {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-height: 100vh;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .detail-card {
-            background-color: #1f1f1f;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(58, 12, 163, 0.4);
-            max-width: 700px;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .detail-card img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        .detail-card h2 {
-            color: #d0bfff;
-            margin-bottom: 10px;
-        }
-
-        .detail-card p {
-            color: #ddd;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .detail-card .genre {
-            color: #a4508b;
-            font-weight: 600;
-        }
-
-        .back-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #3a0ca3, #000000);
-            color: #fff;
-            border: none;
-            border-radius: 12px;
-            padding: 12px 24px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover {
-            background: linear-gradient(135deg, #5f0f40, #000000);
-            box-shadow: 0 6px 18px rgba(95, 15, 64, 0.6);
-            transform: translateY(-2px);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style.css" />
+    
 </head>
 <body>
 
@@ -103,6 +42,6 @@ if (!$artiest) {
         <a href="catalogus.php" class="back-button">← Terug naar overzicht</a>
     </div>
 </div>
-
+ <?php include 'assets/incudes/footer.php' ?>
 </body>
 </html>
